@@ -1,0 +1,17 @@
+lean/.lake/
+sim/.venv/
+**/__pycache__/
+*.pyc
+.pytest_cache/
+.hypothesis/
+# generated (large) outputs; the small outputs quoted in the note are versioned
+sim/out/gn/
+sim/out/fem/*.npz
+sim/out/fem/*.log
+*.vtk
+*.stl
+# LaTeX build files
+*.aux
+*.log
+*.out
+*.toc

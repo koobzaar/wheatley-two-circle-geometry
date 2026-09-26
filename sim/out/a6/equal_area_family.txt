@@ -1,0 +1,14 @@
+reference: N = 3, R = 1, h = 1.0: total area S = 8.68092848
+  N = 2: R fixed -> H = 1.24521 (h = 1.24521), fold [0.00, 0.00] deg | H fixed -> R = 1.14536 (h = 0.87309), fold [0.00, 0.00] deg
+  N = 3: R fixed -> H = 1.00000 (h = 1.00000), fold [41.41, 47.16] deg | H fixed -> R = 1.00000 (h = 1.00000), fold [41.41, 47.16] deg
+  N = 4: R fixed -> H = 0.85419 (h = 0.85419), fold [54.68, 75.21] deg | H fixed -> R = 0.89204 (h = 1.12102), fold [63.70, 80.45] deg
+  N = 5: R fixed -> H = 0.75833 (h = 0.75833), fold [58.53, 94.82] deg | H fixed -> R = 0.81248 (h = 1.23080), fold [77.79, 102.32] deg
+  N = 6: R fixed -> H = 0.69023 (h = 0.69023), fold [58.94, 109.03] deg | H fixed -> R = 0.75231 (h = 1.32923), fold [87.59, 116.66] deg
+  N = 7: R fixed -> H = 0.63910 (h = 0.63910), fold [58.05, 119.60] deg | H fixed -> R = 0.70542 (h = 1.41760), fold [94.82, 126.54] deg
+reference: N = 3, R = 1, h = 1.5: total area S = 12.30579319
+  N = 2: R fixed -> H = 1.86261 (h = 1.86261), fold [0.00, 0.00] deg | H fixed -> R = 1.18095 (h = 1.27017), fold [0.00, 0.00] deg
+  N = 3: R fixed -> H = 1.50000 (h = 1.50000), fold [49.17, 53.13] deg | H fixed -> R = 1.00000 (h = 1.50000), fold [49.17, 53.13] deg
+  N = 4: R fixed -> H = 1.28451 (h = 1.28451), fold [67.83, 82.44] deg | H fixed -> R = 0.87651 (h = 1.71133), fold [75.25, 85.49] deg
+  N = 5: R fixed -> H = 1.14320 (h = 1.14320), fold [75.02, 101.51] deg | H fixed -> R = 0.79031 (h = 1.89798), fold [91.41, 105.49] deg
+  N = 6: R fixed -> H = 1.04301 (h = 1.04301), fold [77.38, 114.74] deg | H fixed -> R = 0.72726 (h = 2.06253), fold [102.39, 118.57] deg
+  N = 7: R fixed -> H = 0.96788 (h = 0.96788), fold [77.60, 124.35] deg | H fixed -> R = 0.67913 (h = 2.20869), fold [110.32, 127.72] deg

@@ -1,0 +1,20 @@
+[project]
+name = "wheatley"
+version = "0.1.0"
+description = "Geometry and simulation of Wheatley S-shaped aortic valve leaflets"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "numpy", "scipy", "sympy", "matplotlib", "pyvista", "meshio", "gmsh",
+  "numba", "joblib", "pandas", "pytest", "hypothesis", "jupyterlab", "ipykernel",
+  "pymupdf", "trimesh",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/wheatley"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

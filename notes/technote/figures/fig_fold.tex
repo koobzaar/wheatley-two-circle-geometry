@@ -1,0 +1,14 @@
+% Figure: fold angle along the junction, N = 2..7 (h = 1), and N = 3 with h = 1.5.
+\begin{tikzpicture}
+\begin{axis}[graph, width=0.55\textwidth, height=0.42\textwidth, xmin=0, xmax=1, ymin=-6, ymax=132,
+             ytick={0,30,60,90,120}, xlabel={$z$}, ylabel={$\delta$ ($^\circ$)}]
+  \addplot[rtwo] table {\figdata fold2.dat} node[pos=0.02, anchor=south west, inner sep=1pt, font=\footnotesize, text=muted] {$N=2$};
+  \addplot[rthree, line width=1.4pt] table {\figdata fold3.dat} node[pos=0.55, anchor=north, inner sep=2pt, font=\footnotesize, text=rthree] {$N=3$};
+  \addplot[rfour] table {\figdata fold4.dat} node[pos=0.02, anchor=south west, inner sep=1pt, font=\footnotesize, text=rfour] {$N=4$};
+  \addplot[rfive] table {\figdata fold5.dat} node[pos=0.02, anchor=south west, inner sep=1pt, font=\footnotesize, text=rfive] {$N=5$};
+  \addplot[rsix] table {\figdata fold6.dat} node[pos=0.02, anchor=south west, inner sep=1pt, font=\footnotesize, text=rsix] {$N=6$};
+  \addplot[rseven] table {\figdata fold7.dat} node[pos=0.02, anchor=south west, inner sep=1pt, font=\footnotesize, text=rseven] {$N=7$};
+  \addplot[rthree, dashed] table {\figdata fold3_h15.dat}
+    node[pos=0.55, anchor=south, font=\footnotesize, text=rthree, yshift=1pt] {$N=3,\ h=\pgfmathprintnumber{1.5}$};
+\end{axis}
+\end{tikzpicture}

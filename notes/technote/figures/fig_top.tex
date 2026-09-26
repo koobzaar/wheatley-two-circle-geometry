@@ -1,0 +1,16 @@
+% Figure: top views of the N-leaflet valves; thin: sections z = 1/4, 1/2, 3/4; thick: free edges (z = 1).
+\newcommand{\topview}[1]{%
+  \addplot[muted, dashed, line width=0.45pt] table {\figdata ring.dat};
+  \addplot[sone, line width=0.5pt, opacity=0.6] table {\figdata top#1_sec1.dat};
+  \addplot[stwo, line width=0.5pt, opacity=0.6] table {\figdata top#1_sec2.dat};
+  \addplot[sone, line width=1.5pt] table {\figdata top#1_edge1.dat};
+  \addplot[stwo, line width=1.5pt] table {\figdata top#1_edge2.dat};}
+\begin{tikzpicture}
+\begin{groupplot}[group style={group size=4 by 1, horizontal sep=0.035\textwidth}, geom, width=0.21\textwidth,
+                  xmin=-1.05, xmax=1.05, ymin=-1.05, ymax=1.05, title style={font=\small, yshift=-3pt}]
+  \nextgroupplot[title={$N=2$}] \topview{2}
+  \nextgroupplot[title={$N=3$}] \topview{3}
+  \nextgroupplot[title={$N=4$}] \topview{4}
+  \nextgroupplot[title={$N=6$}] \topview{6}
+\end{groupplot}
+\end{tikzpicture}

@@ -1,0 +1,35 @@
+% Figure: flat patterns of the two halves (true stays, t = const) and the curvature of the two images of the junction.
+\begin{tikzpicture}
+\begin{axis}[geom, width=0.3\textwidth, name=A]
+  \addplot[sone, line width=0.45pt] table {\figdata flat1_z.dat};
+  \addplot[sone, line width=0.45pt] table {\figdata flat1_stays.dat};
+  \addplot[sone, line width=1.3pt] table {\figdata flat1_base.dat};
+  \addplot[sone, line width=1.3pt] table {\figdata flat1_top.dat};
+  \addplot[ink, line width=1.8pt] table {\figdata flat1_junction.dat};
+  \node[lab, text=sone, anchor=west, xshift=2pt] at \ptflatonebase {$z=0$};
+  \node[lab, text=sone, anchor=east, xshift=-2pt] at \ptflatonetop {$z=1$};
+  \node[lab, anchor=south east, xshift=-1pt, yshift=1pt] at \ptflatoneJ {$M$};
+  \node[panel, anchor=south west] at (rel axis cs:0,1.02) {(a)};
+\end{axis}
+\begin{axis}[geom, width=0.17\textwidth, at={($(A.east)+(0.05\textwidth,0)$)}, anchor=west, name=B]
+  \addplot[stwo, line width=0.45pt] table {\figdata flat2_z.dat};
+  \addplot[stwo, line width=0.45pt] table {\figdata flat2_stays.dat};
+  \addplot[stwo, line width=1.3pt] table {\figdata flat2_top.dat};
+  \addplot[ink, line width=1.8pt] table {\figdata flat2_junction.dat};
+  \node[dot] at (axis cs:0,0) {};
+  \node[lab, anchor=north east] at (axis cs:0,0) {$V_2$};
+  \node[lab, text=stwo, anchor=west, xshift=2pt] at \ptflattwotop {$z=1$};
+  \node[lab, anchor=east, xshift=-2pt] at \ptflattwoJ {$M$};
+  \node[panel, anchor=south west] at (rel axis cs:0,1.02) {(b)};
+\end{axis}
+\begin{axis}[graph, width=0.27\textwidth, height=0.24\textwidth, at={($(B.east)+(0.17\textwidth,0)$)}, anchor=west,
+             xmin=0, xmax=1, xlabel={$z$},
+             legend style={draw=none, fill=none, font=\footnotesize, at={(0.98,0.03)}, anchor=south east},
+             legend cell align=left]
+  \addplot[sone, name path=kone] table {\figdata kg1.dat};
+  \addplot[stwo, name path=ktwo] table {\figdata kg2neg.dat};
+  \addplot[faint, forget plot] fill between[of=kone and ktwo];
+  \legend{$k_1$, $-k_2$}
+  \node[panel, anchor=south west] at (rel axis cs:-0.28,1.02) {(c)};
+\end{axis}
+\end{tikzpicture}

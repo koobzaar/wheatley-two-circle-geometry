@@ -1,0 +1,8 @@
+fillet vs crease _c   : GOA +1.03%  max|u| +0.94%
+fillet vs crease _m   : GOA +0.27%  max|u| +0.21%
+fillet vs crease _f   : GOA +0.61%  max|u| +0.39%
+fillet vs crease _mz4 : GOA +0.67%  max|u| +1.06%
+crease: mesh 24x33->40x56 +2.89%, 40x56->56x78 +1.54%; corner cut 1/8->1/4 (40x56) +7.41%
+fillet: mesh 24x33->40x56 +2.11%, 40x56->56x78 +1.89%; corner cut 1/8->1/4 (40x56) +7.84%
+crease: 2 -> 4 layers (40x56) +0.25%
+pressure reached: crease_c 120.00, crease_m 76.91, crease_f 120.00, crease_m4L 98.01, crease_mz4 120.00, fillet_c 120.00, fillet_m 120.00, fillet_f 120.00, fillet_mz4 120.00

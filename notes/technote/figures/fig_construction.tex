@@ -1,0 +1,50 @@
+% Figure: the two-circle construction. (a) one section, z = 0.6; (b) the sections of one leaflet as z grows.
+\begin{tikzpicture}
+\begin{axis}[geom, width=0.44\textwidth, xmin=-1.12, xmax=1.12, ymin=-1.08, ymax=1.08, name=A]
+  \addplot[muted, dashed, line width=0.45pt] table {\figdata ring.dat};
+  \addplot[faint, line width=1.5pt] table {\figdata c_others.dat};
+  \addplot[sone, densely dotted, line width=0.55pt] table {\figdata c_big.dat};
+  \addplot[stwo, densely dotted, line width=0.55pt] table {\figdata c_small.dat};
+  \addplot[sone, line width=2.1pt, line cap=round] table {\figdata c_arc1.dat};
+  \addplot[stwo, line width=2.1pt, line cap=round] table {\figdata c_arc2.dat};
+  \addplot[inktwo, line width=0.5pt] table {\figdata c_theta.dat};
+  \draw[muted, line width=0.45pt] \ptconO -- \ptconE  \ptconO -- \ptconP;
+  \draw[sone, line width=0.7pt] \ptconCone -- node[lab, above, text=sone] {$a$} \ptconE;
+  \draw[stwo, line width=0.7pt] \ptconCtwo -- node[lab, right, text=stwo] {$b$} \ptconP;
+  \node[odot=sone] at \ptconCone {};
+  \node[odot=stwo] at \ptconCtwo {};
+  \node[lab, text=inktwo] at \ptconTh {$\theta$};
+  \node[dot] at \ptconO {}; \node[lab, anchor=south west] at \ptconO {$O$};
+  \node[dot] at \ptconE {}; \node[lab, anchor=east] at \ptconE {$E$};
+  \node[dot] at \ptconP {}; \node[lab, anchor=north west] at \ptconP {$P$};
+  \node[dot] at \ptconM {}; \node[lab, anchor=north west, xshift=1pt, yshift=-1pt] at \ptconM {$M$};
+  \node[panel, anchor=north west] at (rel axis cs:0,1) {(a)};
+\end{axis}
+\begin{axis}[geom, width=0.44\textwidth, xmin=-1.12, xmax=1.12, ymin=-1.08, ymax=1.08,
+             at={($(A.east)+(0.06\textwidth,0)$)}, anchor=west]
+  \addplot[muted, dashed, line width=0.45pt] table {\figdata ring.dat};
+  \addplot[sone, line width=1pt, opacity=0.35] table {\figdata sec0_1.dat};
+  \addplot[stwo, line width=1pt, opacity=0.35] table {\figdata sec0_2.dat};
+  \addplot[sone, line width=1pt, opacity=0.48] table {\figdata sec1_1.dat};
+  \addplot[stwo, line width=1pt, opacity=0.48] table {\figdata sec1_2.dat};
+  \addplot[sone, line width=1pt, opacity=0.61] table {\figdata sec2_1.dat};
+  \addplot[stwo, line width=1pt, opacity=0.61] table {\figdata sec2_2.dat};
+  \addplot[sone, line width=1pt, opacity=0.74] table {\figdata sec3_1.dat};
+  \addplot[stwo, line width=1pt, opacity=0.74] table {\figdata sec3_2.dat};
+  \addplot[sone, line width=1pt, opacity=0.87] table {\figdata sec4_1.dat};
+  \addplot[stwo, line width=1pt, opacity=0.87] table {\figdata sec4_2.dat};
+  \addplot[sone, line width=2.1pt] table {\figdata sec5_1.dat};
+  \addplot[stwo, line width=2.1pt] table {\figdata sec5_2.dat};
+  \addplot[ink, line width=0.8pt] table {\figdata junction_top.dat};
+  \node[dot, minimum size=2.6pt] at \ptsecMzero {};
+  \node[dot, minimum size=2.6pt] at \ptsecMone {};
+  \node[dot, minimum size=2.6pt] at \ptsecMtwo {};
+  \node[dot, minimum size=2.6pt] at \ptsecMthree {};
+  \node[dot, minimum size=2.6pt] at \ptsecMfour {};
+  \node[dot] at \ptconO {}; \node[lab, anchor=south east] at \ptconO {$O$};
+  \node[dot] at \ptconE {}; \node[lab, anchor=east] at \ptconE {$E$};
+  \node[dot] at \ptconP {}; \node[lab, anchor=north west] at \ptconP {$P$};
+  \node[lab, text=inktwo, anchor=south] at (axis cs:-0.5,0.02) {$z=1$};
+  \node[panel, anchor=north west] at (rel axis cs:0,1) {(b)};
+\end{axis}
+\end{tikzpicture}

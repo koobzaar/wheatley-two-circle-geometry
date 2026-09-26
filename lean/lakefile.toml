@@ -1,0 +1,14 @@
+name = "WheatleyGeom"
+defaultTargets = ["WheatleyGeom"]
+
+[leanOptions]
+pp.unicode.fun = true
+autoImplicit = false
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "8ab8a31c6565f9f71fe6c5ed91babd559e8deae4"
+
+[[lean_lib]]
+name = "WheatleyGeom"
